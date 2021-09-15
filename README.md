@@ -1,0 +1,2 @@
+# SpringSecurityJwt
+SpringSecurity + JWT example
