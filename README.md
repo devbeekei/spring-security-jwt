@@ -6,3 +6,5 @@
 - Spring Boot(2.5.4) - gradle
 - Spring Security(boot-starter)
 - JWT(0.9.1)
+- JPA(boot-starter)
+- lombok
