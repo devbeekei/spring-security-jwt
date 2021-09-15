@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study?serverTimezone=Asia/Seoul&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: mysqlrootpassword
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: false # DDL ?? ??
+    open-in-view: false # View ??? Session(??? ????) ?? ?? - ??? ???? ?? false ?? (default: true)
+    hibernate:
+      ddl-auto: update # ddl ?? ?? none, update, validata, create, create-drop
+      #      naming:
+      #        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl # ??? ?? ? ??? ?? ??(??)
+      use-new-id-generator-mappings: false #  Hibernate? id ?? ??? ??? ??
+    show-sql: true # sql ??
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true # LAZY ??? default? ??
+        format_sql: true # sql? ?? ?? ??
+
+jwt:
+  secret-key: "spring-security-jwt-example"
